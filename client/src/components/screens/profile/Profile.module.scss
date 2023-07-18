@@ -1,0 +1,63 @@
+.wrapper {
+  color: #000;
+  font-size: 20px;
+}
+.header {
+  min-height: 70px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav {
+  padding: 0 15px;
+  display: flex;
+  gap: 30px;
+}
+.list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.treloo {
+  font-size: 24px;
+  color: #0066ff;
+  font-weight: 500;
+}
+.link {
+  color: #4a92fe;
+  transition: 0.3s;
+  &:hover {
+    color: #0066ff;
+  }
+}
+.title {
+  font-size: 40px;
+  font-weight: 500;
+  color: #1f79ff;
+}
+.container {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.form {
+  min-width: 250px;
+  margin-top: 30px;
+  .input-title {
+    font-size: 14px;
+    color: #202c92;
+    cursor: pointer;
+  }
+  .input {
+    padding: 4px 10px;
+    border: 1px solid #1d77ff;
+    border-radius: 1px;
+    margin: 10px 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,109 @@
+.wrapper {
+  position: fixed; /* фиксированное положение */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4); /* цвет фона */
+  z-index: 1050;
+  -webkit-transition: opacity 200ms ease-in;
+  -moz-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in; /* анимация перехода */
+  pointer-events: none; /* элемент невидим для событий мыши */
+  margin: 0;
+  padding: 0;
+  opacity: 1; /* делаем окно видимым */
+  pointer-events: auto; /* элемент видим для событий мыши */
+}
+.overlay {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+
+.modal {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  outline: 0;
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  transition: 0.3s;
+  &:hover {
+    color: red;
+  }
+}
+.modal {
+  .asdf {
+    position: relative;
+    max-width: 400px;
+    background-color: #ebecfe;
+    color: #000;
+    padding: 40px 60px 60px 40px;
+    h1 {
+      font-size: 25px;
+      font-weight: 600;
+      text-align: start;
+      line-height: 140%;
+    }
+  }
+  .form {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    button {
+      background-color: #000000;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 12px 50px;
+      border-radius: 2px;
+    }
+    div {
+      display: flex;
+      gap: 8px;
+      .input {
+        width: 100%;
+      }
+    }
+  }
+  .input {
+    background: transparent;
+    padding: 5px 5px 5px 0;
+    width: 270px;
+    border-bottom: 2px solid #000;
+    font-weight: 500;
+  }
+  label {
+    margin-bottom: 30px;
+  }
+  .input-title {
+    color: #6e6d6f;
+    font-size: 10px;
+  }
+}
+
+.error {
+  color: #ff5384;
+  font-size: 10px;
+  position: absolute;
+  max-width: 150px;
+  margin-top: 5px;
+}

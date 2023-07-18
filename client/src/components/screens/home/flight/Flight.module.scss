@@ -1,0 +1,331 @@
+.pick {
+  background-color: #fff;
+  padding: 10px 14px 24px 10px;
+  display: flex;
+  border-radius: 25px 25px 0px 0px;
+  max-width: 240px;
+  align-items: center;
+  justify-content: space-between;
+
+  .pick-select:first-child {
+    a {
+      position: relative;
+      font-size: 16px;
+      font-weight: 500;
+      color: #000;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 15%;
+        background-image: url('../../../../assets/flight-3.svg');
+        background-position: center;
+        left: -20px;
+        margin-right: 2px;
+        height: 16px;
+        width: 16px;
+      }
+    }
+    padding: 16px;
+    padding-left: 45px;
+    border-radius: 20px;
+  }
+  .pick-select {
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .pick-select:hover {
+    background-color: rgba(62, 134, 245, 0.2);
+  }
+
+  .pick-select:last-child {
+    padding: 16px;
+    font-weight: 500;
+    a {
+      position: relative;
+      font-size: 16px;
+      color: #000;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 15%;
+        background-image: url('../../../../assets/hotel.svg');
+        background-position: center;
+        left: -20px;
+        margin-right: 2px;
+        height: 16px;
+        width: 16px;
+      }
+    }
+    padding: 16px;
+    padding-left: 45px;
+    border-radius: 20px;
+  }
+}
+.pick-select-active {
+  background-color: rgba(62, 134, 245, 0.2);
+}
+
+.cruise {
+  padding: 60px 48px;
+  border-radius: 0px 50px 50px 50px;
+  background-color: #fff;
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+.flight {
+  // margin-top: 100px;
+  position: relative;
+}
+.department {
+  flex: 0 1 53%;
+}
+.time-to-department {
+  h5 {
+    font-weight: 600;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  flex: 0 1 48%;
+  & > div:first-child {
+    h4 {
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 55%;
+        top: -2px;
+        background-image: url('../../../../assets/flight-right.png');
+        background-position: center;
+        background-size: cover;
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+  & > div:last-child {
+    h4 {
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 55%;
+        top: -2px;
+        background-image: url('../../../../assets/flight-left.png');
+        background-position: center;
+        background-size: cover;
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+}
+
+.search {
+  border-radius: 60px;
+  flex: 0 1 auto;
+  background-color: #3e86f5;
+  padding: 40px 50px;
+  opacity: 0.8;
+  transition: 0.3s;
+  &:hover {
+    background-color: #639ffa;
+  }
+}
+
+.settings {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: space-between;
+  gap: 10px;
+  & > div {
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    border: 2px solid rgba(172, 172, 172, 0.5);
+    padding: 40px 22px;
+    h3 {
+      font-size: 22px;
+      font-weight: 500;
+      color: #000;
+      line-height: 100%;
+      margin-top: 10px;
+    }
+    h4 {
+      line-height: 100%;
+      font-weight: 600;
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.5);
+    }
+    img {
+      border-radius: 40px;
+      border: 1px dashed rgba(0, 0, 0, 0.5);
+      height: 40px;
+      width: 40px;
+      padding: 5px;
+    }
+  }
+}
+
+.search-btn {
+  font-size: 24px;
+  text-align: center;
+  background: #3e86f5;
+  border: 1px solid #3e86f5;
+  color: #fff;
+  margin-top: 20px;
+  padding: 2px 29px;
+  border-radius: 8px;
+  transition: 0.3s;
+  &:hover {
+    background-color: #fff;
+    color: #3e86f5;
+  }
+}
+.wrap {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1130px) {
+  .cruise {
+    flex-wrap: wrap;
+  }
+  .department {
+    flex: 0 1 50%;
+  }
+  .search {
+    display: none;
+  }
+  .wrap {
+    display: flex;
+  }
+}
+@media (max-width: 864px) {
+  .settings {
+    flex-wrap: wrap;
+  }
+  .department,
+  .time-to-department {
+    flex: 0 1 100%;
+  }
+  .search {
+    display: none;
+  }
+}
+@media (max-width: 516px) {
+  .settings > div {
+    flex-wrap: wrap;
+    padding: 20px 15px;
+    h3 {
+      font-size: 20px;
+    }
+    h4 {
+      font-size: 14px;
+    }
+  }
+  .cruise {
+    padding: 20px 15px;
+  }
+}
+
+.input {
+  outline: none;
+  border: 2px solid #dbdbdb;
+  padding: 2px;
+  padding-left: 5px;
+  width: 150px;
+  border-radius: 5px;
+}
+
+.notice-err {
+  position: fixed;
+  max-width: 270px;
+  border-radius: 2px;
+  z-index: 10;
+  padding: 15px;
+  padding-left: 42px;
+  top: 5%;
+  left: 10px;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    background-color: #f75656;
+  }
+  background-color: #ffdddc;
+  animation: fade-my 2s;
+  &__title-err {
+    color: #000;
+    font-weight: 500;
+  }
+  &__text-err {
+    color: #000;
+    font-size: 14px;
+    line-height: 150%;
+    margin-top: 5px;
+  }
+  &__close-err {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: transparent;
+    color: #000;
+    padding: 4px 8px;
+  }
+}
+@keyframes fade-my {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.notice {
+  color: #000;
+  z-index: 10;
+  position: fixed;
+  max-width: 350px;
+  border-radius: 2px;
+  padding: 15px;
+  top: 5%;
+  left: 10px;
+  background-color: #313131;
+  animation: fade-my 2s;
+  &__title {
+    color: #fff;
+  }
+  &__text {
+    color: #898a8b;
+    font-size: 14px;
+    line-height: 150%;
+    margin-top: 5px;
+  }
+  &__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: transparent;
+    color: gray;
+    padding: 4px 8px;
+  }
+}
+@keyframes fade-my {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

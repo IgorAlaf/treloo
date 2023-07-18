@@ -1,0 +1,4 @@
+/server/node_modules
+/server/.prettierrc
+/client/node_modules
+/client/.prettierrc
